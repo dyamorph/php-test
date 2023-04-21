@@ -17,7 +17,7 @@ class Student {
     }
 }
 class Aspirant extends Student {
-    protected string $researchTopic;
+    public string $researchTopic;
 
     public function __construct($firstName, $lastName, $group, $averageMark, $researchTopic) {
         parent::__construct($firstName, $lastName, $group, $averageMark);
