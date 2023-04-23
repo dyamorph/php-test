@@ -18,12 +18,12 @@ class Coord
 
 class PathFinder
 {
-    private array $field;
-    private Coord $start;
-    private Coord $end;
-    private array $visited;
-    private array $queue;
-    private array $visitedFrom;
+    public array $field;
+    public Coord $start;
+    public Coord $end;
+    public array $visited;
+    public array $queue;
+    public array $visitedFrom;
 
     public function __construct($field, $start, $end)
     {
@@ -57,7 +57,7 @@ class PathFinder
         return null;
     }
 
-    private function getNeighbors($coordinate): array
+    public function getNeighbors($coordinate): array
     {
         $neighbors = array();
         $dx = array(0, 0, -1, 1);
@@ -76,7 +76,7 @@ class PathFinder
         return $neighbors;
     }
 
-    private function getPath($end): ?array
+    public function getPath($end): ?array
     {
         $path = [];
         $current = $end;
@@ -95,8 +95,8 @@ class PathFinder
 
 class Field
 {
-    private array $data;
-    private string $filename;
+    public array $data;
+    public string $filename;
     public function __construct($filename)
     {
         $this->filename = $filename;
